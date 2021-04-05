@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>RawGrungo</defName>
+    <label>raw grungo</label>
+    <description>Raw grungo. If you're not a Gerzee or an animal, eating this raw has a good chance of giving you food poisoning.</description>
+	
+	<ingestible>
+      <preferability>DesperateOnlyForHumanlikes</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>	
+	
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/RawGrungo</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>15</MaxHitPoints>
+      <MarketValue>0.8</MarketValue>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.4</FoodPoisonChanceFixedHuman>	  	  
+    </statBases>	
+	<socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>PlantFoodRaw</li>
+    </thingCategories>		
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>6</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+</Defs>

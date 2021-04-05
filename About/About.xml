@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+	<name>Gerzee Expansion</name>
+	<author>Brightsideguy</author>
+			<packageId>Brightsideguy.GerzeeExpansion</packageId>
+	<supportedVersions>
+		<li>1.2</li>
+	</supportedVersions>
+	<description>Plant and equipment expansion for the Gerzee Race. Currently includes a plant that can be grown in below-freezing temperatures, a powerful battering ram for those with Gerzee-like strength, a simple Gerzee helmet, and a full Gerzee power armor set. Coming soon: CE patch and additional faction.</description>
+
+	<modDependencies>
+      <li>
+        <packageId>Brightsideguy.GerzeeRace</packageId>
+        <displayName>Gerzee Race</displayName>
+		<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=1783636077</steamWorkshopUrl>
+      </li>
+
+    </modDependencies>
+
+	<loadAfter>
+            <li>CETeam.CombatExtended</li>
+            <li>Brightsideguy.GerzeeRace</li>
+    </loadAfter>
+
+
+
+
+</ModMetaData>

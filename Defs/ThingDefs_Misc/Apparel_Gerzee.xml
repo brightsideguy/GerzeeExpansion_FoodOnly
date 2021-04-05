@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <!-- ==================================== Spacer =====================================-->
+
+  <ThingDef Name="GerzeeApparelArmorPowerBase" ParentName="ArmorMachineableBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>  
+      <skillRequirements>
+        <Crafting>8</Crafting><!--7 -->
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>GerzeePowerArmor/GerzeePowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>1.5</generateCommonality><!--2 -->
+	<tradeability>Sellable</tradeability>
+    <statBases>
+      <WorkToMake>75000</WorkToMake><!--60000 -->
+      <MaxHitPoints>440</MaxHitPoints><!--340 -->
+      <Mass>18</Mass><!--12 -->
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.2</ArmorRating_Sharp><!--1.06 -->
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt><!--0.45 -->
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>34</Insulation_Cold><!-- -->
+      <Insulation_Heat>40</Insulation_Heat><!--10 -->
+      <EquipDelay>15</EquipDelay><!--14-->
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.4</MoveSpeed><!-- -0.4 -->
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <tradeTags>
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <costList>
+      <ComponentSpacer>4</ComponentSpacer><!-- 4 -->
+	  <ComponentIndustrial>1</ComponentIndustrial><!--added in for cooling tech-->
+      <Plasteel>130</Plasteel><!--100 -->
+      <Uranium>25</Uranium><!--20 -->
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>GerzeePowerArmor/GerzeePowerArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+  <!--    <defaultOutfitTags>
+        <li>GerzeeAltered</li>
+      </defaultOutfitTags>-->
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>				
+<!--    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>-->
+    <comps>
+      <li Class="CompProperties_BiocodableApparel"/>
+    </comps>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="GerzeeApparelArmorPowerBase">
+    <defName>GerzeePowerArmor</defName>
+    <label>Gerzee power armor</label>
+    <description>A large suit of powered armor made to fit the Gerzee physique. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a Gerzee to wear this heavy armor and still move easily, while built-in cooling tech helps the wearer survive warfare in extremely hot climates.\n\nArmor like this is really only seen in warefare companies that attempt to alter Gerzee into viable soldiers.</description>
+    <apparel>
+      <tags>
+        <li>SpacerMilitary</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  
+  
+  
+  
+  
+  <!-- ==================================== Basic =====================================-->  
+    <!--
+  <ThingDef ParentName="ArmorSmithableBase">
+    <defName>Apparel_Gerzee_PlateArmor</defName>
+    <label>Gerzee plate armor</label>
+    <description>Overlapping solid plates of armor covering the entire body from neck to feet. Made to fit the hulking physique of a Gerzee.</description>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PlateArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>GerzeePlateArmor/GerzeePlateArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>170</costStuffCount>
+    <statBases>
+      <WorkToMake>38000</WorkToMake>
+      <MaxHitPoints>290</MaxHitPoints>
+      <Mass>15</Mass>
+      <StuffEffectMultiplierArmor>0.73</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.8</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PlateArmor/PlateArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>MedievalMilitary</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+-->
+
+
+  
+  
+  
+  
+  
+  
+</Defs>
